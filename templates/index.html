@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ondia Project - 004</title>
+  <title>Phonebook Application</title>
   <style>
     body {
       max-width: 600px;
@@ -50,13 +50,13 @@
       color: red;
     }
 
-    .sectionnote{
+    .sectionnote {
       color: rgba(190, 31, 164, 0.89);
     }
-    .footnote{
+
+    .footnote {
       color: rgba(0, 0, 255, 0.712);
     }
-
   </style>
 </head>
 
@@ -74,15 +74,15 @@
     <button type="submit">Search</button>
     {% if show_result %}
         <h1>Result for '{{ keyword }}' </h1>
-            <ul> 
+            <ul>
             {% for person in persons_html %}
-            <li>Name: <b>{{ person['name'] }} </b>  ---- Phone Number: <b>{{ person['number'] }}</b></li>
+            <li>Name: <b>{{ person['name'] }} </b> ---- Phone Number: <b>{{ person['number'] }}</b></li>
             {% endfor %}
             </ul>
     {% endif %}
   </form>
 
-  <p class="footnote"><i>This app is developed in Python by <b>{{ developer_name }}</b> and deployed with Flask on AWS Cloud using Clouldformation Service.</i></p>
+  <p class="footnote"><i>This app is developed in Python by <b>{{ developer_name }}</b> using Flask.</i></p>
 </body>
 
 </html>
